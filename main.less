@@ -1,0 +1,179 @@
+
+  .parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+  }
+
+  .parallax__group {
+    position: relative;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+  }
+
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+  }
+
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+  }
+
+  .parallax__layer--deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+  }
+
+  /* demo styles
+  --------------------------------------------- */
+
+  body, html {
+    overflow: hidden;
+  }
+
+  body {
+    font: 100% / 1.5 Arial;
+  }
+
+  * {
+    margin:0;
+    padding:0;
+  }
+
+  .parallax {
+    font-size: 200%;
+  }
+
+   /* centre the content in the parallax layers */
+  .title {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: 'Fugaz One', cursive;
+    font-size: 50px;
+    color: white;
+  }
+
+
+
+  /* style the groups
+  --------------------------------------------- */
+
+  #group1 {
+    z-index: 5; /* slide over group 2 */
+  }
+  #group1 .parallax__layer--base {
+    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/ee/70/8a/ee708aa0030374b66dec4c3f5910146e.jpg");
+    background-size:cover;
+  }
+
+  #group2 {
+    z-index: 3; /* slide under groups 1 and 3 */
+  }
+  #group2 .parallax__layer--back {
+        color: white;
+    background-image: url("https://68.media.tumblr.com/000dab69b48d6bb3ea2dc79e29b8e3fc/tumblr_ohsmy4Di2k1qa4iv8o3_500.gif");
+        background-size: 100%;
+  }
+
+.test {
+      background-color: rgba(255,255,255,0.8);
+}
+
+  #group3 {
+    z-index: 4; /* slide over group 2 and 4 */
+  }
+  #group3 .parallax__layer--base {
+    background-image: url("https://media.giphy.com/media/3o6Ztq3oIg43hocGLS/giphy.gif");
+    background-size: cover;
+  }
+
+  #group4 {
+    z-index: 2; /* slide under group 3 and 5 */
+  }
+  #group4 .parallax__layer--deep {
+    background-image: url("http://68.media.tumblr.com/29d274b7206c809595b8a80f1b350b2f/tumblr_np6os981qi1rm0s3do1_r2_500.gif");
+    background-size:cover;
+  }
+
+  #group5 {
+    z-index: 3; /* slide over group 4 and 6 */
+  }
+  #group5 .parallax__layer--base {
+    background-image: url("https://media.giphy.com/media/3o7TKRFgMaYB8jd0Nq/giphy.gif");
+    background-size:cover;
+  }
+
+  #group6 {
+    z-index: 2; /* slide under group 5 and 7 */
+  }
+  #group6 .parallax__layer--back {
+    background-image: url("https://media.giphy.com/media/3otPoTLOivtBMpm9WM/giphy.gif");
+    background-size:cover;
+  }
+
+
+#group7 {
+    z-index: 5; /* slide over group 2 */
+  }
+  #group7 .parallax__layer--base {
+    background-image: url("https://media.giphy.com/media/AHfFdXvMSt5Oo/source.gif");
+    background-size:cover;
+  }
+
+  #group8 {
+    z-index: 3; /* slide under groups 1 and 3 */
+  }
+  #group8 .parallax__layer--back {
+        color: white;
+    background-image: url("https://media.giphy.com/media/l2YWEYdkKXJIOC7jq/giphy.gif");
+        background-size: 100%;
+  }
+
+.test {
+      background-color: rgba(255,255,255,0.8);
+}
+
+  #group9 {
+    z-index: 4; /* slide over group 2 and 4 */
+  }
+  #group9 .parallax__layer--base {
+    background-image: url("https://68.media.tumblr.com/be24077e1d80b991b73e400c9a30b1ea/tumblr_ocnntrZkBq1utumufo1_500.gif");
+    background-size: cover;
+  }
+
+
+  #group10 {
+    z-index: 3; /* slide over group 7 */
+  }
+  #group10 .parallax__layer--base {
+    background-image:url("https://media.giphy.com/media/NqDD834oiqpfG/giphy.gif");
+    background-size:cover;
+  }
